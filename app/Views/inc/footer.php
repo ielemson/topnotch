@@ -14,7 +14,7 @@
 							<div class="footer-column col-lg-6 col-md-6 col-sm-12">
 								<div class="footer-widget about-widget">
 									<div class="logo">
-										<a href="<?=base_url('/')?>"><img src="images/footer-logo.png" alt="" /></a>
+										<a href="<?=base_url('/')?>"><img src="<?=base_url('images/footer-logo.png')?>" alt="" /></a>
 									</div>
 									<div class="text">TopNotch Engineering Limited is an Engineering company, with a vision to provide dependable, cost effective ..</div>
 									<a href="<?=base_url('about')?>" class="theme-btn btn-style-four">About Company</a>
@@ -26,10 +26,19 @@
 								<div class="footer-widget services-widget">
 									<h2>Our Services</h2>
 									<ul class="footer-service-list">
-										<li><a href="#">Sales</a></li>
+										<!-- <li><a href="#">Sales</a></li>
 										<li><a href="#">Repairs</a></li>
 										<li><a href="#">Maintenance</a></li>
-										<li><a href="#">Installation</a></li>
+										<li><a href="#">Installation</a></li> -->
+										
+										<?php
+                            if ($services) { ?>
+                           
+                                        <?php foreach ($services as $key => $service) { ?>
+                                            <li class="text-capitalize"><a href="<?= base_url('service/'.$service['slug']);?>"><?=$service['title']?></a></li>
+                                        <?php  } ?>
+                                    
+                            <?php } ?>
 									</ul>
 								</div>
 							</div>
@@ -63,7 +72,9 @@
 									<div class="number">+(49) 1516 3522 203</div>
 									<ul>
 										<li>Friedrich-Frank-Bogan 120, 21033, Hamburg Germany</li>
-										<li><a href="#">info@topnotch.com</a></li>
+										<li><a href="mailto::support@topnotchengineering.com">
+										support@topnotchengineering.com
+										</a></li>
 										<!-- <li>Mon to Sat: 9:am to 6pm</li> -->
 									</ul>
 								</div>

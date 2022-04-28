@@ -37,13 +37,35 @@ $routes->get('/contact', 'PageController::contact');
 $routes->get('/vision', 'PageController::vision');
 $routes->get('/mission', 'PageController::mission');
 // Auth
-$routes->get('/login', 'AuthController::index');
+$routes->get('/admin/login', 'AuthController::index');
 // Services
 $routes->get('/repairs', 'PageController::repair');
 $routes->get('/sales', 'PageController::sales');
 $routes->get('/maintenance', 'PageController::maintenance');
 $routes->get('/installation', 'PageController::installation');
 
+$routes->post('admin/login', 'AuthController::attemptLogin');
+$routes->get('admin/register', 'AuthController::getRegister');
+$routes->post('create-account', 'AuthController::attemptRegister');
+$routes->get('logout', 'AuthController::logout');
+
+// Services
+$routes->get('service/(:any)', 'PageController::service/$1');
+
+$routes->group('admin', ['namespace' => 'App\Controllers\Admin',"filter" => "auth"], function($routes) {
+
+	// ADMIN DASHBOARD
+	
+	$routes->get('dashboard', 'AdminController::index',['as'=>'dashboard']);
+	$routes->get('add', 'AdminController::add',['as'=>'add']);
+	$routes->get('services', 'AdminController::viewServices',['as'=>'viewServices']);
+	$routes->post('addService', 'AdminController::addService',['as'=>'addService']);
+    $routes->get('service/edit/(:num)', 'AdminController::editService/$1');
+    $routes->get('service/delete/(:num)', 'AdminController::deleteService/$1');
+	$routes->post('service/update/(:num)', 'AdminController::updateService/$1');
+	// USERS
+	$routes->get('users','UserController::index');
+  });
 
 /*
  * --------------------------------------------------------------------

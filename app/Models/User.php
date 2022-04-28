@@ -14,7 +14,7 @@ class User extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['firstname','lastname','email','gender','password','address','role','phone'];
+    protected $allowedFields    = ['fname','email','password','role'];
 
     // Dates
     protected $useTimestamps = false;
@@ -29,11 +29,9 @@ class User extends Model
     	// we need different rules for registration, account update, etc
 	protected $dynamicRules = [
 		'registration' => [
-			'firstname' 		=> 'required|alpha_space|min_length[2]',
-			'lastname' 			=> 'required|alpha_space|min_length[2]',
-			'gender' 				=> 'required|alpha_space|min_length[2]',
+			'fname' 		=> 'required|alpha_space|min_length[2]',
 			'email' 			=> 'required|valid_email|is_unique[users.email,id,{id}]',
-			'phone' 			=> 'required|is_unique[users.phone,id,{id}]',
+			// 'phone' 			=> 'required|is_unique[users.phone,id,{id}]',
 			'password'			=> 'required|min_length[5]',
 			'password_confirm'	=> 'matches[password]'
 		],

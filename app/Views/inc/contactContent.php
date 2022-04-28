@@ -9,22 +9,23 @@
 						<!-- Title Box -->
 						<div class="title-box">
 							<h3>Contact Details</h3>
-							<div class="title-text">Get in touch with us for any questions about our industries or projects.</div>
+							<div class="title-text">
+							Get in touch with us for any questions about our industries or projects.</div>
 						</div>
 						<ul class="contact-info-list">
-							<li><span class="icon icon-home"></span><strong>Head Office</strong>73 Ringer House Lane, Dynatis Newyork 33022, USA</li>
-							<li><span class="icon icon-location-pin"></span><strong>Factory Address</strong>Suite # 140 Belfast Ave, Trendys Florida 33022, USA</li>
-							<li><span class="icon icon-envelope-open"></span><strong>Email us</strong>solustrid@example.com</li>
-							<li><span class="icon icon-call-in"></span><strong>Call Support</strong>+(345) 206 7849</li>
+							<li><span class="icon icon-home"></span><strong>Head Office</strong>Friedrich-Frank-Bogan 120,21033 Hamburg Germany</li>
+							<!-- <li><span class="icon icon-location-pin"></span><strong>Factory Address</strong>Suite # 140 Belfast Ave, Trendys Florida 33022, USA</li> -->
+							<li><span class="icon icon-envelope-open"></span><strong>Email us</strong>support@topnotchengineering.com</li>
+							<li><span class="icon icon-call-in"></span><strong>Call Support</strong>+(49) 1516 3522 203</li>
 						</ul>
 						
 						<!-- Social Links -->
 						<ul class="social-links">
 							<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-							<li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+							<!-- <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li> -->
 							<li><a href="#"><span class="fab fa-twitter"></span></a></li>
 							<li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-							<li><a href="#"><span class="fab fa-youtube"></span></a></li>
+							<!-- <li><a href="#"><span class="fab fa-youtube"></span></a></li> -->
 						</ul>
 						
 					</div>
@@ -35,13 +36,13 @@
 					<div class="inner-column wow fadeInRight" data-wow-delay="0ms">
 						<!-- Sec Title -->
 						<div class="sec-title">
-							<div class="title">We are Solustrid</div>
+							
 							<h2>Send a Message</h2>
 						</div>
 						
 						<!-- Contact Form -->
 						<div class="contact-form">
-							<form method="post" action="https://t.commonsupport.xyz/solustrid/sendemail.php" id="contact-form">
+							<form method="post" action="" id="contact-form">
 								<div class="row clearfix">
 									
 									<div class="col-lg-6 col-md-6 col-sm-12 form-group">

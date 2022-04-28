@@ -19,10 +19,15 @@
                             <p>As a fast-growing company, we can provide a wide range of professionally delivered services, including:</p>
                         </div>
                         <ul class="list-style-one wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <li>Sales</li>
-                            <li>Repairs</li>
-                            <li>Installations</li>
-                            <li>Maintenance</li>
+                      
+                            <?php
+                            if ($services) { ?>
+                           
+                                        <?php foreach ($services as $key => $service) { ?>
+                                            <li><?=$service['title']?></li>
+                                        <?php  } ?>
+                                    
+                            <?php } ?>
                         </ul>
                        
                     </div>
@@ -34,12 +39,12 @@
                         <div class="row clearfix">
                             <div class="column col-lg-6 col-md-6 col-sm-12">
                                 <div class="image wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                    <img src="images/resource/industry-1.jpg" alt="" />
+                                    <img src="images/resource/who-we-are-1.png" alt="who-we-are" />
                                 </div>
                             </div>
                             <div class="column col-lg-6 col-md-6 col-sm-12">
                                 <div class="image wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                    <img src="images/resource/industry-2.jpg" alt="" />
+                                    <img src="images/resource/who-we-are-2.jpg" alt="who-we-are" />
                                 </div>
                             </div>
                         </div>
@@ -52,7 +57,7 @@
     <!-- End About Industry Block -->
 
 	<!-- Request Quote -->
-    <section class="request-quote-section" style="background-image: url(images/background/6.jpg);">
+    <section class="request-quote-section" style="background-image: url(images/background/contact-bg.jpg);">
         <div class="auto-container">
             <div class="sec-title light">
                 <!-- <div class="title">We are Solustrid</div> -->
@@ -60,7 +65,7 @@
                 <div class="text">We will be glad to hear from you.</div>
             </div>
             <div class="appointment-form">
-                <form method="post" action="https://t.commonsupport.xyz/solustrid/contact.html">
+                <form method="post" action="">
                     <div class="row clearfix">
                         <div class="field-group col-xl-8 col-lg-12 col-md-12 col-sm-12">
                             <div class="row clearfix">
@@ -79,10 +84,14 @@
                                 <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                     <select class="custom-select-box">
                                         <option>Service Interested in</option>
-                                        <option>Sales</option>
-                                        <option>Repairs</option>
-                                        <option>Maintenance</option>
-                                        <option>Installation</option>
+                                        <?php
+                            if ($services) { ?>
+                           
+                                        <?php foreach ($services as $key => $service) { ?>
+                                            <option><?=$service['title']?></option>
+                                        <?php  } ?>
+                                    
+                            <?php } ?>
 
                                     </select>
                                 </div>

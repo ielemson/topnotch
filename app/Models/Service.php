@@ -14,7 +14,7 @@ class Service extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['slug','title','description','image'];
+    protected $allowedFields    = ['slug','title','description','img'];
 
     // Dates
     protected $useTimestamps = false;
@@ -24,6 +24,14 @@ class Service extends Model
     protected $deletedField  = 'deleted_at';
 
     // Validation
+    protected $dynamicRules = [
+		'storeServices' => [
+            'title' => 'required',
+            'description' => 'required',
+            // 'img' => 'nulla',
+		],
+    ];
+
     protected $validationRules      = [];
     protected $validationMessages   = [];
     protected $skipValidation       = false;
@@ -39,4 +47,9 @@ class Service extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function getRule(string $rule)
+	{
+		return $this->dynamicRules[$rule];
+	}
 }
