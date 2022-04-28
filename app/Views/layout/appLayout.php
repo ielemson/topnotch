@@ -17,7 +17,7 @@
 
 <div class="page-wrapper">
     <!-- Preloader -->
-    <!-- <div class="preloader"></div> -->
+    <div class="preloader"></div>
 
    
     <?= $this->include('inc/header')?>
